@@ -58,3 +58,12 @@ Whether you want to tweak the timetable grid for your own college schedule, adap
 ├── LICENSE                      # MIT Open-Source License definitions
 ├── vite.config.ts               # Bundler rules config
 └── tsconfig.json                # Strict compiler rules config
+
+---
+
+## 🤖 Built with Google AI Studio
+
+This entire application was designed, engineered, and structured utilizing **Google AI Studio** and the **Gemini 3 Pro** backend ecosystem using "Build Mode". 
+
+*   **Prompt Architecture:** Context windows and structural parameters were managed inside the AI Studio console to scaffold components, state logic, and the file-tree architecture cleanly.
+*   **Purpose:** This repository serves as an open-source demonstration of utilizing cloud-based AI agent platforms to rapidly prototype fully functional web systems.
