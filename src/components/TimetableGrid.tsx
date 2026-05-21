@@ -229,7 +229,7 @@ export default function TimetableGrid({
             <span className={textLabelClass}>Spacing</span>
             <button
               id="zoom-out-btn"
-              onClick={() => setHourHeight(prev => Math.max(48, prev - 8))}
+              onClick={() => setHourHeight((prev: number) => Math.max(48, prev - 8))}
               className={spacingBtnClass}
               title="Decrease cell height"
             >
@@ -237,7 +237,7 @@ export default function TimetableGrid({
             </button>
             <button
               id="zoom-in-btn"
-              onClick={() => setHourHeight(prev => Math.min(120, prev + 8))}
+              onClick={() => setHourHeight((prev: number) => Math.min(120, prev + 8))}
               className={spacingBtnClass}
               title="Increase cell height"
             >
@@ -282,23 +282,27 @@ export default function TimetableGrid({
         <div className="min-w-[800px] lg:min-w-0 grid grid-cols-[64px_1fr] relative">
           
           {/* Hour Labels Column */}
-          <div className={`border-r-2 pb-4 select-none ${
+          <div className={`border-r-2 select-none relative ${
             theme === 'dark' ? 'border-indigo-500 bg-[#1E293B]/40' : theme === 'contrast' ? 'border-r-4 border-black bg-white text-black font-extrabold' : 'border-slate-900 bg-slate-50/60'
           }`}>
             {/* Top corner placeholder spacer */}
             <div className={`h-10 ${theme === 'dark' ? 'border-b-2 border-indigo-500' : theme === 'contrast' ? 'border-b-4 border-black' : 'border-b-2 border-slate-900'}`} />
             
-            {hoursArray.map((hr) => (
-              <div
-                key={hr}
-                className={`text-[10px] font-mono font-bold text-right pr-2.5 relative flex items-start justify-end ${
-                  theme === 'dark' ? 'text-slate-400' : 'text-slate-500'
-                }`}
-                style={{ height: `${hourHeight}px`, paddingTop: '4px' }}
-              >
-                <span>{`${hr.toString().padStart(2, '0')}:00`}</span>
-              </div>
-            ))}
+            <div className="relative" style={{ height: `${(hoursArray.length - 1) * hourHeight}px` }}>
+              {hoursArray.map((hr, idx) => (
+                <div
+                  key={hr}
+                  className={`text-[10px] font-mono font-bold text-right pr-2 absolute right-0 w-full h-0 flex items-center justify-end ${
+                    theme === 'dark' ? 'text-slate-400' : theme === 'contrast' ? 'text-black' : 'text-slate-500'
+                  }`}
+                  style={{ 
+                    top: `${idx * hourHeight}px`,
+                  }}
+                >
+                  <span className="leading-none select-none translate-y-[-0.5px]">{`${hr.toString().padStart(2, '0')}:00`}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Days Columns */}
@@ -324,11 +328,11 @@ export default function TimetableGrid({
             <div className={`col-span-full relative`} style={{ height: `${(hoursArray.length - 1) * hourHeight}px` }}>
               
               {/* Vertical Column guides */}
-              <div className="absolute inset-0 grid grid-cols-7 pointer-events-none">
+              <div className={`absolute inset-0 grid ${mobileSingleDay === 'All' ? 'grid-cols-7' : 'grid-cols-1'} pointer-events-none`}>
                 {DAYS.map((day) => (
                   <div
                     key={day}
-                    className={`border-r h-full ${
+                    className={`border-r last:border-r-0 h-full ${
                       theme === 'dark' ? 'border-dashed border-slate-800' : theme === 'contrast' ? 'border-dashed border-black/30' : 'border-dashed border-slate-200'
                     } ${
                       mobileSingleDay !== 'All' && mobileSingleDay !== day ? 'hidden' : ''
@@ -351,7 +355,7 @@ export default function TimetableGrid({
               </div>
 
               {/* Clickable background cells to add events easily & Droppable fields */}
-              <div className="absolute inset-0 grid grid-cols-7">
+              <div className={`absolute inset-0 grid ${mobileSingleDay === 'All' ? 'grid-cols-7' : 'grid-cols-1'}`}>
                 {DAYS.map((day) => {
                   const hideColumn = mobileSingleDay !== 'All' && mobileSingleDay !== day;
                   return (
