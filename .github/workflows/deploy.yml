@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Change to master if your default branch is master
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -26,7 +26,6 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-size: 20
           node-version: 20
           cache: 'npm'
 
