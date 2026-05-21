@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🗓️ Smart Timetable & Idea Space
 
-# Run and deploy your AI Studio app
+A modern, fluid full-stack workspace application designed to handle dynamic weekly planning alongside an interactive brain-dump system. Built completely using containerized components and instant state syncing.
 
-This contains everything you need to run your app locally.
+## ✨ Core Features
 
-View your app in AI Studio: https://ai.studio/apps/446b62fa-9dd8-4d68-b7b7-521adb5fc946
+*   **Interactive Timetable Grid:** A visual daily scheduler with reactive calendar view tracking blocks and event dialog overlays.
+*   **Kanban Idea Board:** An integrated scratchpad to store, update, and sort project workflows next to your schedule.
+*   **State Management:** Instant local-state parsing with full framework reactivity across multi-file architectures.
+*   **Clean Config Slicing:** Dedicated modules for routing, interface definitions, and mock metadata profiles.
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React 18 + TypeScript | Explicit type safety and component structure |
+| **Build Tooling** | Vite | Rapid module replacement and bundle optimization |
+| **Styling Engine** | Tailwind CSS | Dynamic layouts and custom spacing architecture |
+| **Components** | Radix UI / Lucide Icons | Accessible interaction modules and clean icons |
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 📁 Repository Structure
+
+```text
+├── src/
+│   ├── components/
+│   │   ├── EventDialog.tsx      # Modal scheduler controller
+│   │   ├── IdeaBoard.tsx        # Kanban workspace panel
+│   │   ├── IdeaDialog.tsx       # Content configuration overlay
+│   │   └── TimetableGrid.tsx    # Primary visual calendar view
+│   ├── data/
+│   │   └── initialData.ts       # Structured base data arrays
+│   ├── App.tsx                  # Core layout wrapper
+│   ├── main.tsx                 # Client entry point
+│   ├── types.ts                 # Central interface definitions
+│   └── index.css                # Global style layer
+├── index.html                   # HTML Entry template
+├── vite.config.ts               # Bundler rules config
+└── tsconfig.json                # Strict compiler rules config
