@@ -2,27 +2,27 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A modern, fluid full-stack workspace application designed to handle dynamic weekly planning alongside an interactive brain-dump system. Built completely using containerized components and instant state syncing.
+# 🗓️ Smart Timetable & Idea Space
+
+A fluid, containerized full‑stack workspace for dynamic weekly planning and a lightweight brain‑dump / Kanban area. Built with modular components, instant state syncing, and developer-friendly structure.
 
 ---
 
-## 🔓 Open Source & Contributions
+## 🔓 Open Source
 
-This project is entirely **Open Source** and distributed under the permissive **MIT License**. 
+This project is released under the MIT License — free to use, modify, and redistribute for personal or commercial purposes.
 
-Whether you want to tweak the timetable grid for your own college schedule, adapt the Kanban idea board layout, or contribute code back to the project, you are completely free to do so! 
-
-*   **Forks & Pull Requests:** Contributions are welcome. If you notice a bug or have a feature idea, feel free to open an issue or submit a pull request.
-*   **Commercial & Private Use:** The MIT License grants you full permission to modify, distribute, and use this application privately or commercially with zero restrictions.
+- Forks & PRs welcome. Open issues for bugs or feature requests.
+- Commercial and private use allowed per the MIT terms in LICENSE.
 
 ---
 
 ## ✨ Core Features
 
-*   **Interactive Timetable Grid:** A visual daily scheduler with reactive calendar view tracking blocks and event dialog overlays.
-*   **Kanban Idea Board:** An integrated scratchpad to store, update, and sort project workflows next to your schedule.
-*   **State Management:** Instant local-state parsing with full framework reactivity across multi-file architectures.
-*   **Clean Config Slicing:** Dedicated modules for routing, interface definitions, and mock metadata profiles.
+- Interactive timetable grid with event dialogs and reactive updates  
+- Kanban-style idea board for quick notes and task organization  
+- Instant local-state parsing with framework-wide reactivity  
+- Modular config slices for routing, types, and mock data
 
 ---
 
@@ -30,10 +30,11 @@ Whether you want to tweak the timetable grid for your own college schedule, adap
 
 | Layer | Technology | Purpose |
 | :--- | :--- | :--- |
-| **Frontend Framework** | React 18 + TypeScript | Explicit type safety and component structure |
-| **Build Tooling** | Vite | Rapid module replacement and bundle optimization |
-| **Styling Engine** | Tailwind CSS v4 | Dynamic layouts and custom spacing architecture |
-| **Components** | Radix UI / Lucide Icons | Accessible interaction modules and clean icons |
+| Frontend | React 18 + TypeScript | Strong types, composable components |
+| Build | Vite | Fast dev server & efficient builds |
+| Styling | Tailwind CSS v4 | Utility-first responsive styling |
+| UI | Radix UI, Lucide Icons | Accessible primitives & icons |
+| Containerization | Docker | Reproducible local/dev environments |
 
 ---
 
@@ -41,29 +42,29 @@ Whether you want to tweak the timetable grid for your own college schedule, adap
 
 ```text
 ├── .github/workflows/
-│   └── deploy.yml           # Automated GitHub Pages deployment pipeline
+│   └── deploy.yml           # CI/CD / GitHub Pages pipeline
 ├── src/
 │   ├── components/
-│   │   ├── EventDialog.tsx      # Modal scheduler controller
-│   │   ├── IdeaBoard.tsx        # Kanban workspace panel
-│   │   ├── IdeaDialog.tsx       # Content configuration overlay
-│   │   └── TimetableGrid.tsx    # Primary visual calendar view
+│   │   ├── EventDialog.tsx
+│   │   ├── IdeaBoard.tsx
+│   │   ├── IdeaDialog.tsx
+│   │   └── TimetableGrid.tsx
 │   ├── data/
-│   │   └── initialData.ts       # Structured base data arrays
-│   ├── App.tsx                  # Core layout wrapper
-│   ├── main.tsx                 # Client entry point
-│   ├── types.ts                 # Central interface definitions
-│   └── index.css                # Global style layer
-├── index.html                   # HTML Entry template
-├── LICENSE                      # MIT Open-Source License definitions
-├── vite.config.ts               # Bundler rules config
-└── tsconfig.json                # Strict compiler rules config
+│   │   └── initialData.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── types.ts
+│   └── index.css
+├── index.html
+├── LICENSE
+├── vite.config.ts
+└── tsconfig.json
+```
 
 ---
 
-## 🤖 Built with Google AI Studio
+## 🤖 Built with AI Studio
 
-This entire application was designed, engineered, and structured utilizing **Google AI Studio** and the **Gemini 3 Pro** backend ecosystem using "Build Mode". 
+Scaffolded and structured using Google AI Studio (Gemini 3 Pro) to accelerate prototyping and component design. This repo demonstrates practical AI-assisted engineering workflows.
 
-*   **Prompt Architecture:** Context windows and structural parameters were managed inside the AI Studio console to scaffold components, state logic, and the file-tree architecture cleanly.
-*   **Purpose:** This repository serves as an open-source demonstration of utilizing cloud-based AI agent platforms to rapidly prototype fully functional web systems.
+---
