@@ -1,6 +1,21 @@
 # 🗓️ Smart Timetable & Idea Space
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A modern, fluid full-stack workspace application designed to handle dynamic weekly planning alongside an interactive brain-dump system. Built completely using containerized components and instant state syncing.
+
+---
+
+## 🔓 Open Source & Contributions
+
+This project is entirely **Open Source** and distributed under the permissive **MIT License**. 
+
+Whether you want to tweak the timetable grid for your own college schedule, adapt the Kanban idea board layout, or contribute code back to the project, you are completely free to do so! 
+
+*   **Forks & Pull Requests:** Contributions are welcome. If you notice a bug or have a feature idea, feel free to open an issue or submit a pull request.
+*   **Commercial & Private Use:** The MIT License grants you full permission to modify, distribute, and use this application privately or commercially with zero restrictions.
+
+---
 
 ## ✨ Core Features
 
@@ -17,7 +32,7 @@ A modern, fluid full-stack workspace application designed to handle dynamic week
 | :--- | :--- | :--- |
 | **Frontend Framework** | React 18 + TypeScript | Explicit type safety and component structure |
 | **Build Tooling** | Vite | Rapid module replacement and bundle optimization |
-| **Styling Engine** | Tailwind CSS | Dynamic layouts and custom spacing architecture |
+| **Styling Engine** | Tailwind CSS v4 | Dynamic layouts and custom spacing architecture |
 | **Components** | Radix UI / Lucide Icons | Accessible interaction modules and clean icons |
 
 ---
@@ -25,6 +40,8 @@ A modern, fluid full-stack workspace application designed to handle dynamic week
 ## 📁 Repository Structure
 
 ```text
+├── .github/workflows/
+│   └── deploy.yml           # Automated GitHub Pages deployment pipeline
 ├── src/
 │   ├── components/
 │   │   ├── EventDialog.tsx      # Modal scheduler controller
@@ -38,5 +55,6 @@ A modern, fluid full-stack workspace application designed to handle dynamic week
 │   ├── types.ts                 # Central interface definitions
 │   └── index.css                # Global style layer
 ├── index.html                   # HTML Entry template
+├── LICENSE                      # MIT Open-Source License definitions
 ├── vite.config.ts               # Bundler rules config
 └── tsconfig.json                # Strict compiler rules config
