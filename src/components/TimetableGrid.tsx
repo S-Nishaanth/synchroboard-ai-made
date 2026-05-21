@@ -114,7 +114,7 @@ export default function TimetableGrid({
   };
 
   const containerClass = theme === 'dark'
-    ? 'bg-[#131C30] rounded-3xl border-2 border-indigo-505 shadow-[6px_6px_0px_0px_rgba(99,102,241,0.4)] overflow-hidden transition-colors duration-200'
+    ? 'bg-[#131C30] rounded-3xl border-2 border-indigo-500 shadow-[6px_6px_0px_0px_rgba(99,102,241,0.4)] overflow-hidden transition-colors duration-200'
     : theme === 'contrast'
     ? 'bg-white rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden'
     : 'bg-white rounded-3xl border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] overflow-hidden transition-colors duration-200';
@@ -310,13 +310,13 @@ export default function TimetableGrid({
                 key={day}
                 className={
                   theme === 'dark'
-                    ? 'text-center py-2.5 border-b-2 border-indigo-500 text-xs font-black uppercase tracking-wider text-slate-200 bg-[#1E293B] flex flex-col items-center justify-center border-r-2 border-indigo-500 last:border-r-0'
+                    ? 'text-center h-10 border-b-2 border-indigo-500 text-xs font-black uppercase tracking-wider text-slate-200 bg-[#1E293B] flex flex-col items-center justify-center border-r-2 border-indigo-500 last:border-r-0'
                     : theme === 'contrast'
-                    ? 'text-center py-2.5 border-b-4 border-black text-xs font-black uppercase tracking-wider text-black bg-yellow-300 flex flex-col items-center justify-center border-r-4 border-black last:border-r-0'
-                    : 'text-center py-2.5 border-b-2 border-slate-900 text-xs font-black uppercase tracking-wider text-slate-900 bg-slate-50 flex flex-col items-center justify-center border-r-2 border-slate-900 last:border-r-0'
+                    ? 'text-center h-10 border-b-4 border-black text-xs font-black uppercase tracking-wider text-black bg-yellow-300 flex flex-col items-center justify-center border-r-4 border-black last:border-r-0'
+                    : 'text-center h-10 border-b-2 border-slate-900 text-xs font-black uppercase tracking-wider text-slate-900 bg-slate-50 flex flex-col items-center justify-center border-r-2 border-slate-900 last:border-r-0'
                 }
               >
-                <span>{day}</span>
+                <span className="truncate px-1" title={day}>{day}</span>
               </div>
             ))}
 
@@ -400,7 +400,7 @@ export default function TimetableGrid({
                             }}
                             className={`w-full cursor-alias transition-all duration-75 relative group border-b border-slate-200/20 ${
                               isDragOver
-                                ? 'bg-indigo-300/65 ring-4 ring-indigo-500 z-20 border-dashed border-indigo-650'
+                                ? 'bg-indigo-300/65 ring-4 ring-indigo-500 z-20 border-dashed border-indigo-600'
                                 : theme === 'dark'
                                 ? 'hover:bg-indigo-900/40'
                                 : 'hover:bg-indigo-50/50'
