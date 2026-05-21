@@ -1,0 +1,6 @@
+{
+  "name": "Timetable & Idea Space",
+  "description": "A fully customizable weekly timetable scheduler and dynamic sticky-note idea board with custom colors and local storage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

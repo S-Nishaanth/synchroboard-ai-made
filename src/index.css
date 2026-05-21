@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;850;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@utility bento-shadow-sm {
+  box-shadow: 3px 3px 0px 0px rgba(15, 23, 42, 1);
+}
+
+@utility bento-shadow {
+  box-shadow: 6px 6px 0px 0px rgba(15, 23, 42, 1);
+}
+
+@utility bento-shadow-lg {
+  box-shadow: 8px 8px 0px 0px rgba(15, 23, 42, 1);
+}
+
+@utility bento-shadow-indigo {
+  box-shadow: 8px 8px 0px 0px rgba(79, 70, 229, 0.35);
+}
+
+/* Custom scrollbar and ambient grid background */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid #0f172a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+
